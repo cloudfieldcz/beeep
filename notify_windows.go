@@ -20,7 +20,7 @@ import (
 var isWindows10 bool
 var applicationID string
 
-func init() {
+func Init() {
 	k, err := registry.OpenKey(registry.LOCAL_MACHINE, `SOFTWARE\Microsoft\Windows NT\CurrentVersion`, registry.QUERY_VALUE)
 	if err != nil {
 		return
