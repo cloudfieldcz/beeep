@@ -1,6 +1,6 @@
-module github.com/gen2brain/beeep
+module github.com/cloudfieldcz/beeep
 
-go 1.14
+go 1.17
 
 require (
 	github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4
