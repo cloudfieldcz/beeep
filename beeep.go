@@ -10,6 +10,7 @@ import (
 var (
 	// ErrUnsupported is returned when operating system is not supported.
 	ErrUnsupported = errors.New("beeep: unsupported operating system: " + runtime.GOOS)
+	AppName        = ""
 )
 
 func pathAbs(path string) string {

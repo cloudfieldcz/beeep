@@ -110,10 +110,15 @@ func appID() string {
 		return defID
 	}
 
+	appname := "powershell.exe"
+	if AppName != "" {
+		appname = AppName
+	}
+
 	scanner := bufio.NewScanner(bytes.NewReader(out))
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
-		if strings.Contains(line, "powershell.exe") {
+		if strings.Contains(line, appname) {
 			sp := strings.Split(line, " ")
 			if len(sp) > 0 {
 				return sp[len(sp)-1]
